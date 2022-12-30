@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/*web font*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Permanent+Marker&display=swap');
+/*  
+font-family: 'Permanent Marker', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+*/
+
+/*main_about----------------*/
+.aboutWrap{
+    width: 100%;
+    height: 100vh;
+    padding: 15vh 0;
+    box-sizing: border-box;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color:#e2e4ec;
+    z-index: 99;
+}
+.aboutBox{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 1240px;
+    height:70vh;
+    padding: 60px 0 ;
+    box-sizing: border-box;
+    background-color: #34363E;
+    margin: auto;
+}
+.aboutBox>article{
+    padding:60px;
+    color: #E3E5ED;
+}
+.aboutMe{
+    width: 32%;
+}
+.aboutSkills{
+    width: 43%;
+}
+.aboutBox>article:not(:nth-of-type(3)){
+    border-right: 1px solid #E3E5ED;
+}
+.aboutBox>article h2{
+    font-family: 'Permanent Marker', sans-serif;
+    font-size: 30px;    
+    margin-bottom: 30px;
+}
+.aboutBox>article h3, h4, p{
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.3rem;
+}
+.aboutBox>article h3{
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+.aboutBox>article h3>span{
+    font-size: 14px;
+    font-weight: 100;
+}
+.aboutBox>article h4{
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+.aboutBox>article p{
+    font-size: 14px;
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+.skillsIcon1,.skillsIcon2{
+    display: block;
+    width: 100%;
+    height: 35px;
+    background-color: #E3E5ED;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.aboutHei{
+    width: 100%;
+    height: 500vh;
+    background-color: black;
+
+}
+
+
+
+
+@media only screen and (max-width: 1240px) {
+
+}
+
+
+@media only screen and (max-width: 960px) {
+
+
+
+}
+
+@media only screen and (max-width: 740px) {
+
+
+
+
+}

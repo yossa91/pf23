@@ -1,0 +1,289 @@
+@charset "utf-8";
+
+/*web font*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Permanent+Marker&display=swap');
+/*  
+font-family: 'Permanent Marker', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+*/
+
+/*header----------------*/
+header{
+    /*나중에 삭제*/
+    display: none;
+}
+
+/*header intro animation--------------*/
+.introAni{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.introAni>div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+.introAnifst{
+    display: flex;
+    flex-wrap: nowrap;
+    z-index: 20;
+}
+.introAnifst article{
+    width: 25%;
+    height: 100vh;
+    background-color: #E3E5ED;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-timing-function:cubic-bezier(0.55, 0, 1, 0.45);
+}
+.introAnifst article:nth-of-type(1){
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    animation-name:introAniDwleft;
+}
+.introAnifst article:nth-of-type(2){
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    animation-name:introAniDwright;
+    animation-delay: 0.2s;
+}
+.introAnifst article:nth-of-type(3){
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    animation-name:introAniDwleft;
+    animation-delay: 0.4s;
+}
+.introAnifst article:nth-of-type(4){
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    animation-name:introAniDwright;
+    animation-delay: 0.6s;
+}
+@keyframes introAniDwleft{
+    0% {clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);}
+    100% {clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);}
+}
+@keyframes introAniDwright{
+    0% {clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);}
+    100% {clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);}
+}
+.introAniBack{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: #34363E;
+    animation-name:introAnibg;
+    animation-duration: 0.4s;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function:cubic-bezier(0.64, 0, 0.78, 0);
+    z-index: 10;
+}
+@keyframes introAnibg{
+    0% {clip-path : polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
+    100% {clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);}
+}
+.introLoding{
+    animation-name:introLoding;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    z-index: 5;
+}
+@keyframes introLoding{
+    0% {opacity: 0;}
+    15% {opacity: 1;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
+}
+/*로고수정!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.introLogo{
+    width: 100px;
+    height: 100px;
+    margin: calc(50vh - 50px) auto 0  auto;
+    background-color: black;
+}
+/*main----------------------*/
+main{
+   /* display: none;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes fadein{
+    0% {opacity: 0;}
+    100% {opacity: 1;}*/
+}
+/*main_intro----------------------*/
+.introWrap{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, #34363E 50%, #fff 50%);
+}
+.introTitleBox{
+    width: 1240px;
+    height: 100vh;
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+}
+.introTitleBox::before{
+    display: block;
+    position: absolute;
+    content: '';
+    background-color: #34363E;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    clip-path: polygon(0 0, 190px 0,220px 64%, 245px 78%, 260px 100%, 0 100% );
+}
+.intTitle{
+    position:relative;
+    font-family: 'Permanent Marker', sans-serif;
+    padding:calc(50vh - 250px) 0 0 90px;
+}
+.intTitle>h2{
+    font-size: 80px;
+    line-height: 100px;
+    color: #0a0a0b;
+    padding-left: 10px;
+}
+.intTitle>h2:nth-of-type(1){
+    background: url('../img/imtTitle_h2_1.png')left center no-repeat;
+    margin-bottom: 15px;
+}
+.intTitle>h2:nth-of-type(2){
+    background: url('../img/imtTitle_h2_2.png')left center no-repeat;
+    margin-bottom: 15px;
+}
+.intTitle>h2:nth-of-type(3){
+    background: url('../img/imtTitle_h2_3.png')left center no-repeat;
+}
+.intTitle>h3{
+    font-size: 30px;
+    margin-top: 90px;
+}
+.intTitle>h4{
+    font-size: 24px;
+    margin-top: 35px;
+}
+/**/
+.intResume{
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+}
+.intResume>div{
+    width: 150px;
+    height: 170px;
+    background-color: aqua;
+}
+
+
+
+@media only screen and (max-width: 1240px) {
+/*main_intro----------------------*/
+ .introWrap{
+     width: 100%;
+     height: 100vh;
+     background: linear-gradient(90deg, #34363E 50%, #fff 50%);
+ }
+ .introTitleBox{
+     width: 100%;
+ }
+ /**/
+ .intResume{
+    right: 20px;
+    bottom: 6%;
+
+    
+}
+
+
+
+}
+
+
+@media only screen and (max-width: 960px) {
+
+/*main_intro----------------------*/
+ .introTitleBox::before{
+     width: 230px;
+     clip-path: polygon(0 0, 160px 0,190px 64%, 215px 78%, 230px 100%, 0 100% );
+ }
+ .intTitle{
+     padding:calc(50vh - 210px) 0 0 60px;
+ }
+ .intTitle>h2{
+     font-size: 66px;
+     line-height: 80px;
+     padding-left: 8px;
+ }
+ .intTitle>h2:nth-of-type(1){
+     background: url('../img/imtTitle_h2_1_t.png')left center no-repeat;
+ }
+ .intTitle>h2:nth-of-type(2){
+     background: url('../img/imtTitle_h2_2_t.png')left center no-repeat;
+ }
+ .intTitle>h2:nth-of-type(3){
+     background: url('../img/imtTitle_h2_3_t.png')left center no-repeat;
+ }
+ .intTitle>h3{
+     font-size: 26px;
+     margin-top: 60px;
+ }
+ .intTitle>h4{
+     font-size: 20px;
+     margin-top: 30px;
+ }
+
+
+}
+
+@media only screen and (max-width: 740px) {
+
+/*main_intro----------------------*/
+.introTitleBox::before{
+    width: 180px;
+    clip-path: polygon(0 0, 110px 0,140px 64%, 165px 78%, 180px 100%, 0 100% );
+}
+.intTitle{
+    padding:calc(50vh - 145px) 15px 0 15px;
+}
+.intTitle>h2{
+    font-size: 34px;
+    line-height: 50px;
+    padding-left: 5px;
+}
+.intTitle>h2:nth-of-type(1){
+    background: url('../img/imtTitle_h2_1_m.png')left center no-repeat;
+    margin-bottom: 5px;
+}
+.intTitle>h2:nth-of-type(2){
+    background: url('../img/imtTitle_h2_2_m.png')left center no-repeat;
+    margin-bottom: 5px;
+}
+.intTitle>h2:nth-of-type(3){
+    background: url('../img/imtTitle_h2_3_m.png')left center no-repeat;
+}
+.intTitle>h3{
+    font-size: 20px;
+    margin-top: 30px;
+}
+.intTitle>h4{
+    font-size: 14px;
+    margin-top: 20px;
+}
+/**/
+.intResume>div{
+    width: 80px;
+    height: 100px;
+    background-color: #0a0a0b;
+}
+
+
+
+}
